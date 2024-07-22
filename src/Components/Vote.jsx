@@ -14,8 +14,15 @@ function Vote() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Get initial random records from Redux state
-    setRandomRecords(getRandomRecords(items, 2));
+    let isMounted = true; // Flag to track component mount status
+
+    if (isMounted) {
+      setRandomRecords(getRandomRecords(items, 2));
+    }
+
+    return () => {
+      isMounted = false; // Cleanup function sets the flag to false
+    };
   }, [items]);
 
   useEffect(() => {
@@ -45,7 +52,8 @@ function Vote() {
   return (
     <>
       <Title level={2} style={{ textAlign: "center", color: "white" }}>
-        Who's Hotter? Click to Choose.
+        {/* Who's Hotter? Click to Choose. */}
+        Choose your favorite. Click to Choose.
       </Title>
       <Row gutter={[32, 32]} justify="center">
         {randomRecords.map((item) => (

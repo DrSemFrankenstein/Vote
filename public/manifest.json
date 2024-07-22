@@ -3,8 +3,8 @@
   "name": "VotePWA",
   "start_url": "/Vote/",
   "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#242424",
+  "background_color": "#242424",
   "icons": [
     {
       "src": "/Vote/icons/favicon-32x32.png",

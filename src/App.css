@@ -1,5 +1,5 @@
-body,
-html {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -8,10 +8,13 @@ html {
 }
 
 #root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
-  /* text-align: center; Center content inside #root */
 }
 
 header {
@@ -21,8 +24,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 1rem; /* Adjust the height of the header */
-  /* background-color: rgba(24,24,24,0.5); */
+  height: 1rem; /* Adjusted height for better visibility */
   background-color: #242424;
 }
 
@@ -48,9 +50,10 @@ nav a:hover {
 }
 
 main {
-  padding-top: 5rem; /* Space for header */
-  padding-bottom: 2rem; /* Optional: Space at the bottom of the main content */
-  box-sizing: border-box; /* Ensure padding is included in element's total width and height */
+  flex: 1;
+  padding-top: 3rem; /* Space for header */
+  padding-bottom: 2rem; /* Space at the bottom of the main content */
+  box-sizing: border-box;
 }
 
 #root a {
@@ -109,7 +112,35 @@ main {
   overflow: auto;
 }
 
-
 .ant-avatar {
   transition: all 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+/* Positioning the info icon in the top right corner */
+.info-icon {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+/* Positioning the info icon in the top right corner */
+.settings-icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
 }
