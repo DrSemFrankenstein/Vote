@@ -5,7 +5,7 @@ const CACHE_NAME = "my-pwa-cache-v1";
 
 // List of files to cache immediately after the service worker is installed
 const FILES_TO_CACHE = [
-  "/",
+  "/Vote",
   "/index.html",
   // Add other assets like CSS, JS, images, etc.
 ];
