@@ -6,7 +6,7 @@ import PhotoRatingSystem from "../Helper/PhotoRatingSystem";
 import { updateScore } from "../app/actions"; // Import the action
 import { Typography } from "antd";
 
-function Home() {
+function Vote() {
   const { Title } = Typography;
   const [ratingSystem] = useState(new PhotoRatingSystem());
   const [randomRecords, setRandomRecords] = useState([]);
@@ -66,9 +66,11 @@ function Home() {
           </Col>
         ))}
       </Row>
-      <Title level={2} style={{textAlign:'center', color:'white'}}>Who's Hotter? Click to Choose.</Title>
+      <Title level={2} style={{ textAlign: "center", color: "white" }}>
+        Who's Hotter? Click to Choose.
+      </Title>
     </>
   );
 }
 
-export default Home;
+export default Vote;

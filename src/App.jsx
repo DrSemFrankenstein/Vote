@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./Components/Home";
+import Vote from "./Components/Vote";
 import Rating from "./Components/Rating";
 
 function App() {
@@ -12,18 +12,18 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">HOME</Link>
+                <Link to="/">VOTE</Link>
               </li>
               <li>
-                <Link to="/about">RATING</Link>
+                <Link to="/rating">RATING</Link>
               </li>
             </ul>
           </nav>
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<Rating />} />
+            <Route path="/" element={<Vote />} />
+            <Route path="/rating" element={<Rating />} />
           </Routes>
         </main>
       </div>
