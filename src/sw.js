@@ -1,16 +1,13 @@
-// service-worker.js
-
-// This will be the cache name for your static assets
 const CACHE_NAME = "my-pwa-cache-v1";
 
-// List of files to cache immediately after the service worker is installed
 const FILES_TO_CACHE = [
-  "/Vote",
-  "/index.html",
+  "/Vote/",
+  "/Vote/index.html",
+  "/Vote/assets/style.css",  // Example of CSS
+  "/Vote/assets/main.js",    // Example of JS
   // Add other assets like CSS, JS, images, etc.
 ];
 
-// Install event: cache assets
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -20,7 +17,6 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// Fetch event: serve assets from cache, falling back to network
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
@@ -32,26 +28,6 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
-// Push event: handle incoming push notifications
-self.addEventListener("push", (event) => {
-  const options = {
-    body: event.data.text(),
-    // Add other notification options like icon, image, etc. if desired
-  };
-  event.waitUntil(self.registration.showNotification("Your App Name", options));
-});
-
-self.addEventListener("message", (event) => {
-  if (event.data.type && event.data.type === "displayNotification") {
-    self.registration.showNotification(
-      "People Finder Notification.",
-      event.data.options
-    );
-  }
-});
-
-// Activate event: clear old caches
-// Update event: if there's a new service worker, activate it immediately
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
@@ -65,6 +41,21 @@ self.addEventListener("activate", (event) => {
       );
     })
   );
-  // Makes the updated service worker take control immediately
   return self.clients.claim();
+});
+
+self.addEventListener("push", (event) => {
+  const options = {
+    body: event.data.text(),
+  };
+  event.waitUntil(self.registration.showNotification("Your App Name", options));
+});
+
+self.addEventListener("message", (event) => {
+  if (event.data.type && event.data.type === "displayNotification") {
+    self.registration.showNotification(
+      "People Finder Notification.",
+      event.data.options
+    );
+  }
 });

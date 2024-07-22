@@ -10,31 +10,31 @@ export default defineConfig({
       manifest: {
         short_name: "VotePWA",
         name: "Vote PWA",
-        start_url: "/",
+        start_url: "/Vote/",
         display: "standalone",
         theme_color: "#ffffff",
         background_color: "#ffffff",
         icons: [
           {
-            src: "/icons/favicon-32x32.png",
+            src: "/Vote/icons/favicon-32x32.png",
             sizes: "96x96",
             type: "image/png",
             purpose: "any maskable",
           },
           {
-            src: "/icons/apple-touch-icon.png",
+            src: "/Vote/icons/apple-touch-icon.png",
             sizes: "144x144",
             type: "image/png",
             purpose: "any maskable",
           },
           {
-            src: "/icons/android-chrome-192x192.png",
+            src: "/Vote/icons/android-chrome-192x192.png",
             sizes: "192x192",
             type: "image/png",
             purpose: "any maskable",
           },
           {
-            src: "/icons/android-chrome-512x512.png",
+            src: "/Vote/icons/android-chrome-512x512.png",
             sizes: "512x512",
             type: "image/png",
             purpose: "any maskable",

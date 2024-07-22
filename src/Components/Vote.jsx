@@ -44,6 +44,9 @@ function Vote() {
 
   return (
     <>
+      <Title level={2} style={{ textAlign: "center", color: "white" }}>
+        Who's Hotter? Click to Choose.
+      </Title>
       <Row gutter={[32, 32]} justify="center">
         {randomRecords.map((item) => (
           <Col key={item.id} className="gutter-row" xs={24} lg={8}>
@@ -66,9 +69,6 @@ function Vote() {
           </Col>
         ))}
       </Row>
-      <Title level={2} style={{ textAlign: "center", color: "white" }}>
-        Who's Hotter? Click to Choose.
-      </Title>
     </>
   );
 }
