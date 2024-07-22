@@ -12,7 +12,7 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">VOTE</Link>
+                <Link to="/Vote">VOTE</Link>
               </li>
               <li>
                 <Link to="/rating">RATING</Link>
@@ -22,7 +22,7 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Vote />} />
+            <Route path="/Vote" element={<Vote />} />
             <Route path="/rating" element={<Rating />} />
           </Routes>
         </main>
