@@ -75,8 +75,8 @@ function Rating() {
           renderItem={(item) => (
             <List.Item
               key={item.id}
-              onClick={() => handleAvatarClick(item.id)} // Toggle enlarged state on click
-              style={{ cursor: "pointer" }} // Change cursor to pointer
+              onClick={() => handleAvatarClick(item.id)}
+              style={{ cursor: "pointer" }} 
             >
               <List.Item.Meta
                 avatar={
