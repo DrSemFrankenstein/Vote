@@ -3,8 +3,8 @@ const CACHE_NAME = "my-pwa-cache-v1";
 const FILES_TO_CACHE = [
   "/Vote/",
   "/Vote/index.html",
-  "/Vote/assets/style.css",  // Example of CSS
-  "/Vote/assets/main.js",    // Example of JS
+  "/Vote/assets/style.css",
+  "/Vote/assets/main.js",
   // Add other assets like CSS, JS, images, etc.
 ];
 

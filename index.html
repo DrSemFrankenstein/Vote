@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#ffffff"> <!-- Default to light theme -->
 
     <script>
+      // Function to set theme color based on the preferred color scheme
       const setThemeColor = () => {
         const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
         const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -19,7 +20,10 @@
         }
       };
 
+      // Call the function initially
       setThemeColor();
+
+      // Listen for changes in the preferred color scheme
       window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setThemeColor);
     </script>
   </head>
@@ -27,6 +31,6 @@
     <div id="root"></div>
     <button id="installButton" style="display:none;">Install App</button>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="/src/installPrompt.js"></script>
+    <script type="module" src="/src/installPrompt.js"></script>
   </body>
 </html>
