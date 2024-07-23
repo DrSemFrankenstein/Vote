@@ -205,9 +205,9 @@ function App() {
                 {`[
   {
     "id": 1,
-    "fullName": "Melissa Reichert",
+    "fullName": "Name",
     "score": 1000,
-    "img": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg"
+    "img": "https://www.imageserver.com/image.jpg"
   },
   ...
 ]`}
