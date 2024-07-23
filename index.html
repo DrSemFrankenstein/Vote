@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#ffffff"> <!-- Default to light theme -->
 
     <script>
+      // Function to set theme color based on the preferred color scheme
       const setThemeColor = () => {
         const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
         const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -19,15 +20,17 @@
         }
       };
 
+      // Call the function initially
       setThemeColor();
+
+      // Listen for changes in the preferred color scheme
       window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setThemeColor);
     </script>
-    <script type="module" crossorigin src="/Vote/assets/index-5dJkxzNH.js"></script>
+    <script type="module" crossorigin src="/Vote/assets/index-BIb2lVf9.js"></script>
     <link rel="stylesheet" crossorigin href="/Vote/assets/index-DvpXKjD9.css">
   <link rel="manifest" href="/Vote/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/Vote/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
     <button id="installButton" style="display:none;">Install App</button>
-    <script src="/src/installPrompt.js"></script>
   </body>
 </html>
