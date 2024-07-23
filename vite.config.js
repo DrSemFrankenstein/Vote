@@ -12,8 +12,8 @@ export default defineConfig({
         name: "Vote PWA",
         start_url: "/Vote/",
         display: "standalone",
-        theme_color: "#242424",
-        background_color: "#242424",
+        theme_color: "#242424",  // Default color
+        background_color: "#242424",  // Default color
         icons: [
           {
             src: "/Vote/icons/favicon-32x32.png",
@@ -41,6 +41,12 @@ export default defineConfig({
           },
         ],
       },
+      workbox: {
+        // Options for the workbox plugin if necessary
+      },
+      injectManifest: {
+        // Options for the inject manifest
+      }
     }),
   ],
 });

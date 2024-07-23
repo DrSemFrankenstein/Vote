@@ -5,9 +5,28 @@
     <link rel="icon" type="image/svg+xml" href="/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vote PWA</title>
+    <meta name="theme-color" content="#ffffff"> <!-- Default to light theme -->
+
+    <script>
+      const setThemeColor = () => {
+        const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+        const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+        if (theme === "dark") {
+          themeColorMetaTag.setAttribute("content", "#121212");  // Dark theme color
+        } else {
+          themeColorMetaTag.setAttribute("content", "#ffffff");  // Light theme color
+        }
+      };
+
+      setThemeColor();
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setThemeColor);
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <button id="installButton" style="display:none;">Install App</button>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="/src/installPrompt.js"></script>
   </body>
 </html>
