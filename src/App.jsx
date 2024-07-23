@@ -270,7 +270,7 @@ function App() {
           </Routes>
         </main>
         <footer>
-          <Text level={6} style={{ color: "white" }}>
+          <Text level={6} class="footer-text">
             Created by{" "}
             <a
               href="https://www.linkedin.com/in/simon-p-68016224/"

@@ -1,3 +1,27 @@
+:root {
+  /* Light theme variables */
+  --background-color: white;
+  --text-color: black;
+  --header-background: white;
+  --link-color: black;
+  --link-hover-color: darkblue;
+  --logo-shadow: #646cffaa;
+  --react-logo-shadow: #61dafbaa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme variables */
+    --background-color: #121212;
+    --text-color: white;
+    --header-background: #1a1a1a;
+    --link-color: white;
+    --link-hover-color: blue;
+    --logo-shadow: #646cffaa;
+    --react-logo-shadow: #61dafbaa;
+  }
+}
+
 html,
 body {
   margin: 0;
@@ -5,6 +29,8 @@ body {
   width: 100%;
   height: 100%;
   display: block !important;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 #root {
@@ -24,8 +50,8 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 1rem; /* Adjusted height for better visibility */
-  background-color: #242424;
+  height: 1rem;
+  background-color: var(--header-background);
 }
 
 nav ul {
@@ -42,24 +68,25 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: var(--link-color);
 }
 
 nav a:hover {
   text-decoration: underline;
+  color: var(--link-hover-color);
 }
 
 main {
   flex: 1;
-  padding-top: 3rem; /* Space for header */
-  padding-bottom: 2rem; /* Space at the bottom of the main content */
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   box-sizing: border-box;
   align-content: center;
 }
 
 #root a {
   text-decoration: none;
-  color: white;
+  color: var(--link-color);
 }
 
 .logo {
@@ -70,11 +97,11 @@ main {
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--logo-shadow));
 }
 
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--react-logo-shadow));
 }
 
 @keyframes logo-spin {
@@ -97,19 +124,19 @@ main {
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--text-color);
 }
 
 .ant-list-item-meta-description {
-  color: white !important;
+  color: var(--text-color) !important;
 }
 
 .ant-empty-description {
-  color: white !important;
+  color: var(--text-color) !important;
 }
 
 #scrollableDiv {
-  height: 100%; /* Or any fixed height */
+  height: 100%;
   overflow: auto;
 }
 
@@ -117,9 +144,17 @@ main {
   transition: all 0.3s ease;
 }
 
+.title-text {
+  color: var(--text-color);
+}
+
+.footer-text {
+  color: var(--text-color);
+}
+
 footer {
   text-align: center;
-  color: white;
+  color: var(--text-color);
   padding: 10px;
   position: fixed;
   width: 100%;
@@ -127,21 +162,19 @@ footer {
   left: 0;
 }
 
-/* Positioning the info icon in the top right corner */
-.info-icon {
-  position: absolute;
-  top: 16px;
-  right: 24px;
-  font-size: 24px;
-  cursor: pointer;
-  color: white;
-}
-/* Positioning the info icon in the top right corner */
+.info-icon,
 .settings-icon {
   position: absolute;
   top: 16px;
-  left: 16px;
   font-size: 24px;
   cursor: pointer;
-  color: white;
+  color: var(--text-color);
+}
+
+.info-icon {
+  right: 24px;
+}
+
+.settings-icon {
+  left: 16px;
 }

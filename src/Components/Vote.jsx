@@ -51,7 +51,7 @@ function Vote() {
 
   return (
     <>
-      <Title level={2} style={{ textAlign: "center", color: "white" }}>
+      <Title level={2} style={{ textAlign: "center" }} class="title-text">
         {/* Who's Hotter? Click to Choose. */}
         Choose your favorite. Click to Choose.
       </Title>
