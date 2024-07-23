@@ -5,14 +5,15 @@ window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
-  // Update UI to notify the user they can add to home screen
-  showInstallButton();
+  // Optionally, you can show a custom install message or UI here
+  // Auto-show the install prompt after a short delay
+  setTimeout(() => {
+    showInstallPrompt();
+  }, 3000); // Adjust delay as needed
 });
 
-function showInstallButton() {
-  const installButton = document.getElementById('installButton');
-  installButton.style.display = 'block';
-  installButton.addEventListener('click', () => {
+function showInstallPrompt() {
+  if (deferredPrompt) {
     // Show the install prompt
     deferredPrompt.prompt();
     // Wait for the user to respond to the prompt
@@ -25,5 +26,5 @@ function showInstallButton() {
       // Clear the saved prompt since it can't be used again
       deferredPrompt = null;
     });
-  });
+  }
 }
