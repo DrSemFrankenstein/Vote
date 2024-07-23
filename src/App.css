@@ -12,9 +12,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark theme variables */
-    --background-color: #121212;
+    --background-color: #242424;
     --text-color: white;
-    --header-background: #1a1a1a;
+    --header-background: #242424;
     --link-color: white;
     --link-hover-color: blue;
     --logo-shadow: #646cffaa;
