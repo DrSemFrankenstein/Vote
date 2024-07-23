@@ -202,13 +202,12 @@ function App() {
             <strong>JSON Format Example:</strong>
             <pre>
               <code>
-                {`*Required
-[
+                {`[
   {
-    "id": 1 *,
-    "fullName": "Melissa Reichert" *,
-    "sex": "female",
-    "score": 1000 *
+    "id": 1,
+    "fullName": "Melissa Reichert",
+    "score": 1000,
+    "img": "https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg"
   },
   ...
 ]`}
@@ -270,7 +269,7 @@ function App() {
             <Route path="/rating" element={<Rating />} />
           </Routes>
         </main>
-        {/* <footer>
+        <footer>
           <Text level={6} style={{ color: "white" }}>
             Created by{" "}
             <a
@@ -281,7 +280,7 @@ function App() {
             </a>
             {new Date().getFullYear()}©
           </Text>
-        </footer> */}
+        </footer>
       </div>
     </Router>
   );

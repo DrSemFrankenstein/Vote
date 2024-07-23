@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   max-width: 1280px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -54,6 +54,7 @@ main {
   padding-top: 3rem; /* Space for header */
   padding-bottom: 2rem; /* Space at the bottom of the main content */
   box-sizing: border-box;
+  align-content: center;
 }
 
 #root a {

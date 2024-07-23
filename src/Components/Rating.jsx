@@ -81,7 +81,7 @@ function Rating() {
               <List.Item.Meta
                 avatar={
                   <Avatar
-                    src={`https://mighty.tools/mockmind-api/content/human/${item.id}.jpg`}
+                    src={item.img || `https://mighty.tools/mockmind-api/content/human/${item.id}.jpg`}
                     size={enlargedId === item.id ? 256 : 128}
                   >
                     {item.fullName[0]}
@@ -89,7 +89,7 @@ function Rating() {
                 }
                 title={
                   <a
-                    href={`https://mighty.tools/mockmind-api/content/human/${item.id}.jpg`}
+                    href={item.img || `https://mighty.tools/mockmind-api/content/human/${item.id}.jpg`}
                   >
                     {item.fullName}
                   </a>

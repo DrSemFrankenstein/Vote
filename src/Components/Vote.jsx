@@ -67,7 +67,7 @@ function Vote() {
             >
               <Image
                 preview={false}
-                src={`https://mighty.tools/mockmind-api/content/human/${item.id}.jpg`}
+                src={item.img || `https://mighty.tools/mockmind-api/content/human/${item.id}.jpg`}
                 style={{ marginBottom: 16, cursor: "pointer" }}
                 onClick={() => handlePhotoClick(item.id)}
               />
